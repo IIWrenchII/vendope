@@ -115,6 +115,14 @@ body {
   }
 }
 
+@keyframes moveBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Ajusta el porcentaje según el ancho del div */
+  }
+}
 
 #banner {
   position: relative;
@@ -654,7 +662,7 @@ footer {
     .animatedBanner img {
       width: 90%; /* Ajusta según tus necesidades para que se vea bien en pantallas más pequeñas */
       height: 80%;
-      //animation: moveBanner 15s linear infinite;
+      animation: moveBanner 15s linear infinite;
     }
   }
   #banner {
