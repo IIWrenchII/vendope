@@ -1,0 +1,812 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  background-color: #001f3f; /* Fondo azul marino */
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar-brand img {
+  width: 8%;
+  height: auto;
+  margin-bottom: 10px; /* Espaciado entre el logo y el texto */
+  padding-top: 10px;
+}
+.textologo {
+  text-align: center;
+  color: white;
+  padding-bottom: 10px;
+  font-family: Arial;
+  font-size: 30px;
+}
+
+#bar-link {
+  background-color: #001f3f;
+  padding: 15px;
+  margin-top: 12px;
+  text-align: center; // Alinea el texto al centro en pantallas más pequeñas
+  // Permite que los elementos se envuelvan en pantallas más pequeñas
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; // Permite que los elementos de la lista se envuelvan en pantallas más pequeñas
+  }
+
+  li {
+    margin-right: 20px;
+    margin-bottom: 10px; // Espaciado entre elementos de la lista
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px; // Añade relleno para hacer los enlaces más clicables
+    border-radius: 5px; // Agrega bordes redondeados
+    transition: background-color 0.3s; // Agrega transición suave al color de fondo
+
+    &:hover {
+      background-color: #555; // Cambia el color de fondo al pasar el ratón
+    }
+  }
+}
+
+.social-icons {
+  i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff; // Color de ícono para mayor visibilidad
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      color: #bbb; // Cambia el color del ícono al pasar el ratón
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+
+  font-weight: 800;
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background-color: #001274;
+  .animatedBanner {
+    width: 200%; /* Ajusta el ancho según tus necesidades */
+    height: 100%;
+     /* Puedes cambiar el color según tus preferencias */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveBanner 5s linear infinite; /* Ajusta la duración y el tipo de animación según tus preferencias */
+  }
+  .animatedBanner img {
+    width: 100%;
+   
+    height: auto;
+    
+    animation: moveBanner 20s linear infinite;
+  }
+}
+
+@keyframes moveBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Ajusta el porcentaje según el ancho del div */
+  }
+}
+
+#banner {
+  position: relative;
+  .container-fluid img {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Ajusta este valor según tus necesidades */
+    transform: translateY(-50%);
+    font-size: 70px; /* Ajusta el tamaño del texto del botón según tus necesidades */
+    padding: 10px 20px; /* Ajusta el relleno del botón según tus necesidades */
+    background-color: #001f3f;
+    color: yellow;
+    border: 1px solid black; /* Añade un borde si lo deseas */
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+#textos-varios {
+  text-align: center;
+  padding: 10px;
+  line-height: 3rem;
+  font-size: medium;
+}
+#venta {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .pagos {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    .texto-rayado {
+      text-decoration: line-through;
+      color: #001f3f;
+      font-size: 6rem;
+    }
+    .precio {
+      font-size: 6rem;
+      font-weight: 500;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn-comprar {
+      background-color: #001f3f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 5rem; /* Ajusta según sea necesario */
+      text-decoration: none;
+    }
+
+    .img-pago {
+      width: 20%; /* Ajusta según sea necesario */
+    }
+    .envio {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+    }
+  }
+  .columna {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%; /* Ajusta según sea necesario */
+    margin: 0;
+    padding: 5px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    box-shadow: 8px 11px 5px -5px rgba(163, 161, 161, 0.20);
+    
+
+    .producto,
+    .info {
+      flex: 2;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      margin: 0;
+      padding: 0;
+      img {
+        width: 80%;
+      }
+      position: relative;
+      .garantia {
+        width: 30%;
+        position: absolute;
+        bottom: 2%;
+        right: 40%;
+      }
+    }
+  }
+}
+
+#banner-medio {
+  width: 100%;
+  height: 100vh; // 100% de la altura de la ventana visible
+  overflow: hidden; // Evita el desbordamiento de contenido
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ajusta la imagen para cubrir completamente el contenedor
+  }
+}
+#tiktok {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+  }
+  .tiktok-embed {
+    width: 200px;
+  }
+}
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#banner-chica {
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+#text-banner {
+  font-family: 40px;
+  text-align: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+  }
+}
+#preguntas {
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+
+  .banner-final {
+    max-width: 800px;
+    margin: auto;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #001f3f; /* Color del texto azul marino */
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #555; /* Color del texto gris oscuro */
+      margin-bottom: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn-consulta {
+      display: inline-block;
+      background-color: #001f3f;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #004080; /* Cambia el color de fondo al pasar el ratón */
+      }
+    }
+  }
+}
+#text-footer {
+  background-color: #001f3f;
+  color: #fff;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+footer {
+  text-align: center;
+  font-size: xx-large;
+}
+//boton wsp
+#whatsapp-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+#whatsapp-button {
+  background-color: #25d366;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50px; /* Hacer el botón redondo */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 58px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #128c7e;
+  }
+
+  i {
+    margin-right: 0px;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #001f3f; /* Cambia el color de fondo según tus preferencias */
+
+  .logo-section {
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    p {
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    img {
+      width: 40%;
+      padding-bottom: 5px;
+    }
+  }
+
+  .separator {
+    width: 2px;
+    height: 20rem; /* Ajusta la altura según tus necesidades */
+    background-color: white; /* Color blanco para la línea de separación */
+  }
+
+  .ul-section {
+    flex-grow: 1;
+    padding: 0 20px; /* Ajusta el espaciado según tus necesidades */
+    padding-top: 10px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      color: white;
+    }
+  }
+
+  .banks-section {
+    margin-left: 20px; /* Ajusta el espaciado según tus necesidades */
+    flex: 1;
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 70%; /* Ajusta el ancho de la imagen según tus necesidades */
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+//breakpoint
+@media (max-width: 767px) {
+  #bar-link {
+    flex-direction: column; // Cambia la dirección de flexión para apilar elementos en pantallas más pequeñas
+
+    ul {
+      justify-content: center; // Centra los elementos de la lista
+    }
+
+    li {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+  #banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    button {
+      font-size: 30px;
+    }
+  }
+  .navbar {
+    img {
+      width: 15vh;
+    }
+  }
+
+  /* Ajuste de padding en textos-varios para pantallas pequeñas */
+  #textos-varios {
+    padding: 10px;
+  }
+
+  .texto {
+    h2 {
+      font-size: 15px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+  #venta {
+    background-color: white;
+
+    justify-content: space-between;
+
+    .columna {
+      /* ajusta según sea necesario */
+      display: flex;
+
+      .producto {
+        img {
+          width: 40vh;
+        }
+      }
+    }
+
+    .columna {
+      /* ajusta según sea necesario */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .pagos {
+        text-align: center;
+
+        .img-info {
+          width: 80vh;
+        }
+
+        .precio {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+
+        .btn-comprar {
+          width: 80%;
+          font-size: 3.5rem;
+          margin-top: 40px;
+          display: inline-block;
+          padding: 10px;
+          background-color: #001f3f;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+          left: 50%;
+          bottom: 0;
+
+          &:hover {
+            background-color: #004080;
+          }
+        }
+
+        .img-pago {
+          width: 8rem;
+          margin: 10px 0;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  #text-banner {
+    padding: 10px;
+    margin-bottom: 0; /* Elimino el margen inferior en pantallas pequeñas */
+  }
+
+  .texto {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  #banner-medio {
+    .img-banner {
+      object-fit: cover;
+      height: 100%; /* Utilizo el 100% de la altura en lugar de una altura fija */
+      max-height: calc(
+        100vh - 30px
+      ); /* Ajusto la altura máxima para dejar espacio para el texto */
+    }
+  }
+  #preguntas .banner-final {
+    padding-top: 10px;
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .btn-consulta {
+      padding: 10px 20px;
+      font-size: 1.5rem;
+    }
+  }
+  #text-footer {
+    h2 {
+      font-size: 1.2em; /* Ajustado el tamaño de la fuente para pantallas pequeñas */
+    }
+  }
+
+  footer {
+    h1 {
+      font-size: 1.5em; /* Ajustado el tamaño de la fuente para pantallas pequeñas */
+    }
+  }
+  //wsp boton
+  #whatsapp-button {
+    padding: 10px;
+    font-size: 5rem;
+    border-radius: 50%;
+    i {
+      margin-right: 3px;
+    }
+  }
+  .footer {
+    flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+    text-align: center;
+    .logo-section {
+      img {
+        width: 20%;
+      }
+      .text {
+        font-size: 13px;
+      }
+    }
+    .ul-section {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  .separator {
+    display: none;
+  }
+  .banks-section {
+    margin-top: 0; /* Elimina el margen superior en pantallas pequeñas */
+    top: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 560px) {
+  #bar-link {
+    flex-direction: column;
+
+    ul {
+      justify-content: center;
+    }
+
+    li {
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+  .navbar {
+    h5 {
+      font-size: 8px;
+    }
+  }
+  .text-center {
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+  }
+  #container{
+    height: 3.5vh;
+    .animatedBanner img {
+      width: 90%; /* Ajusta según tus necesidades para que se vea bien en pantallas más pequeñas */
+      height: 80%;
+      animation: moveBanner 15s linear infinite;
+    }
+  }
+  #banner {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    button {
+      font-size: 20px; // Ajustado el tamaño del botón para pantallas más pequeñas
+    }
+  }
+
+  .navbar {
+    img {
+      width: 10vh; // Ajustado el tamaño del logo para pantallas más pequeñas
+      padding-bottom: 2px;
+    }
+  }
+
+  /* Ajuste de padding en textos-varios para pantallas pequeñas */
+  #textos-varios {
+    padding: 10px;
+  }
+
+  .texto {
+    h2 {
+      font-size: 14px; // Ajustado el tamaño de la fuente para pantallas más pequeñas
+    }
+
+    h3 {
+      font-size: 16px; // Ajustado el tamaño de la fuente para pantallas más pequeñas
+    }
+
+    h1 {
+      font-size: 1em;
+    }
+  }
+
+  #venta {
+    background-color: white;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .columna {
+      .producto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 250px;
+        }
+      }
+    }
+
+    .columna {
+      display: flex;
+      flex-direction: column; // Cambiado a column para apilar elementos en pantallas pequeñas
+      align-items: center;
+      justify-content: center;
+
+      .pagos {
+        text-align: center;
+        .texto-rayado {
+          font-size: 2rem;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .img-info {
+          width: 10%; // Ajustado el ancho de la imagen para ocupar el 100% del contenedor
+          max-width: 250px; // Ajustado el ancho máximo para evitar que sea demasiado grande en pantallas más pequeñas
+        }
+
+        .precio {
+          font-size: 1.5rem; // Ajustado el tamaño de la fuente para pantallas más pequeñas
+          font-weight: 500;
+        }
+
+        .btn-comprar {
+          width: 100%;
+          font-size: 1rem; // Ajustado el tamaño del botón para pantallas más pequeñas
+          margin-top: 5px; // Ajustado el espacio superior para pantallas más pequeñas
+          display: inline-block;
+          padding-left: 8px; // Ajustado el padding para pantallas más pequeñas
+          background-color: #001f3f;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s;
+          left: 50%;
+          bottom: 0;
+
+          &:hover {
+            background-color: #004080;
+          }
+        }
+
+        .img-pago {
+          width: 60%;
+          max-width: 120px; // Ajustado el ancho máximo de la imagen de pago
+          margin: 3px 0; // Ajustado el margen superior e inferior para pantallas más pequeñas
+          padding-bottom: 10px; // Ajustado el espacio inferior para pantallas más pequeñas
+          position: relative;
+        }
+        .envio {
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  #tiktok {
+    width: 100%;
+
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-size: 28px;
+    }
+  }
+  #text-banner {
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-weight: 600;
+      font-size: 33px;
+    }
+    p {
+      font-size: 23px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .banner-final {
+      color: black;
+      .btn-consulta {
+        font-size: 2rem;
+      }
+    }
+  }
+  #whatsapp-container {
+    .whatsapp-button {
+      font-size: 10px;
+    }
+    a {
+      font-size: 40px;
+    }
+  }
+}
